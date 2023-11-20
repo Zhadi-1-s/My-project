@@ -14,7 +14,6 @@ nav .logo{
 }
 .underNav{
     position: relative;
-    border: solid 2px;
     width: 945px;
     height: 56px;
     left: 280px;
@@ -37,7 +36,6 @@ nav .logo{
     position: relative;
     top: 100px;
     left: 80px;
-    border: solid 2px;
     width: 600px;
     height: 250px;
 }
@@ -77,8 +75,7 @@ nav .logo{
 .last{
     position: relative;
     top: 270px;
-    border: solid 2px;
-    width: 1020px;
+    width: 700px;
     margin-left: 50px;
 }
 .last h3{
@@ -88,4 +85,19 @@ nav .logo{
 .last span{
     opacity: 0.7;
     margin-left: 10px;
+}
+.contacts{
+    width: 500px;
+    height: 100px;
+    position: relative;
+    top: 152px;
+    left: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.contacts img{
+    width: 55px;
+    height: 40px;
 }
