@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Navigator } from '../state/navigator';
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -7,8 +9,10 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
 
-  constructor(){
+  constructor(private navigator:Navigator){
     document.body.style.overflowX = 'hidden'
   }
+
+  
 
 }
