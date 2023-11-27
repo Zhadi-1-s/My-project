@@ -13,6 +13,8 @@ export class MainComponent {
     document.body.style.overflowX = 'hidden'
   }
 
-  
+  goToclubs(){
+    this.navigator.navigateToClubs()
+  }
 
 }

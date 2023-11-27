@@ -1,0 +1,37 @@
+nav{
+    background-color: #2C2B2B;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav h1{
+    font-size: 36px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav .logo{
+    position: relative;
+    left: 50px;
+}
+nav .logo:hover{
+    cursor: pointer;
+}
+.test{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 1040px;
+    height: 40px;
+    position: relative;
+    left: 120px;
+    justify-content: space-around;
+    font-size: 22px;
+}
+.test span{
+    transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+.test span:hover{
+    transform: scale(1.025);
+    cursor: pointer;
+}

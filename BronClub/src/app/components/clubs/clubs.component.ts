@@ -17,7 +17,6 @@ export class ClubsComponent implements OnInit {
       this.clubServie.getClubs().subscribe(
         data => {
           this.clubs =  data;
-          window.alert('data taked succesfully')
         },
         error => {
           console.error(error.message)

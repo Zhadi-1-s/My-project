@@ -17,7 +17,7 @@ import { MainModule } from './components/main/main.module';
     AppRoutingModule,
     MainModule
   ],
-  providers: [],
+  providers: [Navigator],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

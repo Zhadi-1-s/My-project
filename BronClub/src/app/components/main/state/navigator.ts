@@ -11,5 +11,7 @@ export class Navigator{
     navigateToClubs(){
         this.router.navigate(['clubs/'])
     }
-
+    NavigateToMain(){
+        this.router.navigate(['main/'])
+    }
 }
