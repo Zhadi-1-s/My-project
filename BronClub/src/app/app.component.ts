@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Navigator } from './components/main/state/navigator';
-
+import { Navigator } from './components/main/state/main.navigator';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

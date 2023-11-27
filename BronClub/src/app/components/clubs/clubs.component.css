@@ -1,0 +1,38 @@
+.title{
+    position: relative;
+    top: 20px;
+    left: 70px;
+    width: 470px;
+}
+.title h1{
+    font-size: 25px;
+}
+.filter{
+    position: relative;
+    top: 25px;
+    left: 70px;
+    width: 250px;
+    height: 590px;
+    border-radius: 12px;
+    background-color: #2C2B2B;
+}
+.filter #filter{
+    display: flex;
+    flex-direction: row;
+    
+    width: 90%;
+    position: relative;
+    top: 10px;
+    left:5%;
+    align-items: center;
+}
+.filter #filter i{
+    color: white;
+    font-size: 30px;
+    margin-left: 30px;
+}
+.filter h2{
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+}
