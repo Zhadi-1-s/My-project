@@ -12,7 +12,7 @@
     top: 25px;
     left: 70px;
     width: 250px;
-    height: 590px;
+    height: 540px;
     border-radius: 12px;
     background-color: #2C2B2B;
 }
@@ -35,4 +35,51 @@
     color: white;
     font-size: 20px;
     margin-left: 10px;
+}
+.byCost{
+    margin-top: 20px;
+    height: 100px;
+}
+.byCost h3{
+    color: white;
+    margin-left: 5px;
+    font-size: 21px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.byCost #filt{
+    display: flex;
+    flex-direction: row;
+    color:white;
+    margin-left: 20px;
+    transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+.byCost #filt:hover{
+    transform: scale(1.025);
+    cursor: pointer;
+}
+
+.byCost #filt h3{
+    margin-left: 20px;
+    margin-top: 5px;
+    font-size: 15px;
+}
+.byRating{
+    margin-top: 40px;
+    height: 150px;
+}
+.byRating h3{
+    color: white;
+    font-size: 21px;
+    margin-left: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.byRating #filt{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-left: 20px;
+}
+.byRating #filt h3{
+    font-size: 20px;
+    margin-left: 20px;
 }
