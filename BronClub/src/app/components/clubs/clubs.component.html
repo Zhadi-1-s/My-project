@@ -57,4 +57,19 @@
             <button>Применить</button>
         </div>
     </div>
+    <div class="main">
+        <div id="res">
+            <span>Найдено {{res}} результатов</span>
+        </div>
+        <div class="club" *ngFor="let club of clubs">
+            <div id="photo">
+                <img [src]="club.mainPhoto" alt="">
+            </div>    
+            <div id="name">
+                    <span>Копьютерный клуб <strong>{{club.name}}</strong></span>
+                    <span style="font-size: 17px; opacity: 0.6;">{{club.location}}</span>
+                    <span style="font-size: 17px; opacity: 0.6;">Рейтинг {{club.rating}} <i class="bi bi-star"></i></span>
+            </div>
+        </div>
+    </div>
 </div>

@@ -10,7 +10,7 @@ import { ClubService } from 'src/app/services/club.service';
 export class ClubsComponent implements OnInit {
 
   clubs:Club[]
-
+  res: any;
   constructor(private clubServie: ClubService){}
 
   ngOnInit(): void {
@@ -22,6 +22,7 @@ export class ClubsComponent implements OnInit {
           console.error(error.message)
         }
       )
+      this.res = this.clubs.length
   }
 
 }
