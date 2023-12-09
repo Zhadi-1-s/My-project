@@ -141,9 +141,12 @@
     left: 350px;
     bottom: 80px;
     box-shadow:0 0 5pt 2pt #D3D3D3;
+    display: flex;
+    flex-direction: row;
 }
-.main #res{
+#res{
     width: 250px;
+    border: solid 1px;
     margin-left: 10px;
     margin-top: 5px;
     text-align: center;
@@ -151,20 +154,21 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .club{
-    border: 1px solid rgba(63, 62, 62, 0.5);
     border-radius: 12px;
-    width: 1020px;
-    height: 150px;
-    margin-top: 10px;
+    width: 270px;
+    height: 270px;
+    margin-top: 20px;
     margin-left: 35px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    box-shadow:0 0 5pt 2pt #D3D3D3;
+    transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
 }
 .club #photo{
-    width: 230px;
-    height: 96%;
-    margin-left: 10px;
+    width: 250px;
+    height: 150px;
+    margin-top: 5px;
 }
 .club #photo img{
     width: 100%;
@@ -172,13 +176,16 @@
     border-radius: 12px;
 }
 .club #name{
-    border: solid 2px;
-    width: 650px;
+    width: 90%;
     height: 96%;
-    font-size: 24px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 10px;
     padding-left: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+}
+.club:hover{
+    transform: scale(1.005);
+    cursor: pointer;
 }
