@@ -134,17 +134,18 @@
 }
 .main{
     width: 970px;
-    height: 500px;
+    height:auto;
     max-height: 100%;
     border-radius: 12px;
     position: absolute;
     left: 350px;
     bottom: 80px;
-    box-shadow:0 0 5pt 2pt #D3D3D3;
+    top: 140px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     padding-left: 10px;
+
 }
 #res{
     width: 250px;
