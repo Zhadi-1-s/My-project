@@ -5,7 +5,14 @@
         </div>
         <div class="search">
             <i class="bi bi-search"></i>
-            <input type="text" placeholder="Введите название">
+            <form [formGroup] = "clubName">
+                <input formControlName="search" placeholder="Введите название">
+            </form>
+            <div *ngIf="clubsData$" class="results">
+                <ul *ngFor="let club of clubsData$">
+                    <li>{{club.name}}</li>
+                </ul>
+            </div>
             <button>Искать</button>
         </div>
     </div>
