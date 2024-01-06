@@ -1,4 +1,4 @@
-import { Component,OnInit,DoCheck,OnChanges, SimpleChanges } from '@angular/core';
+import { Component,OnInit,DoCheck,ElementRef,HostListener } from '@angular/core';
 
 import { Navigator } from '../state/main.navigator';
 import { ClubService } from 'src/app/services/club.service';
@@ -12,14 +12,15 @@ import { Observable, filter, switchMap } from 'rxjs';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
-export class MainComponent implements OnInit,DoCheck{
+export class MainComponent implements OnInit{
 
   clubsData$:Club[] 
 
   clubName:FormGroup
   
+  isDropDownVisibile = false;
 
-  constructor(private navigator:Navigator, private formBuilder:FormBuilder,private autoCompleteService:AutocompleteService,private clubService:ClubService){
+  constructor(private navigator:Navigator, private formBuilder:FormBuilder,private autoCompleteService:AutocompleteService,private elRef: ElementRef){
     document.body.style.overflowX = 'hidden'
     this.clubName = this.formBuilder.group({
       search:['']
@@ -29,17 +30,28 @@ export class MainComponent implements OnInit,DoCheck{
 
   ngOnInit(): void {
     this.clubName.get('search')?.valueChanges.pipe(
-      filter(keyword => keyword.length > 0),
+      
       switchMap(keyword => this.autoCompleteService.getAutocomplete(keyword))
     ).subscribe(data => {
       this.clubsData$ = data
+      this.isDropDownVisibile = true
       console.log('data taken succesfullt', data)
     });
   }
 
-  ngDoCheck(): void {
-    
+  @HostListener('document:click',['$event'])
+  handleClick(event:Event):void{
+    const target = event.target as HTMLElement;
+
+    if(!this.elRef.nativeElement.contains(target)){
+      this.isDropDownVisibile = false;
+    }
   }
+
+  toggleDropDownVisibility():void{
+    this.isDropDownVisibile = !this.isDropDownVisibile
+  }
+
   goToclubs(){
     this.navigator.navigateToClubs()
   }

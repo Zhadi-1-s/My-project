@@ -1,7 +1,7 @@
 .title{
     position: relative;
     top: 20px;
-    left: 70px;
+    left: 100px;
     width: 470px;
 }
 .title h1{
@@ -10,7 +10,7 @@
 .filter{
     position: relative;
     top: 25px;
-    left: 70px;
+    left: 100px;
     width: 250px;
     height: 590px;
     border-radius: 12px;
@@ -19,7 +19,6 @@
 .filter #filter{
     display: flex;
     flex-direction: row;
-    
     width: 90%;
     position: relative;
     top: 10px;
@@ -138,13 +137,15 @@
     max-height: 100%;
     border-radius: 12px;
     position: absolute;
-    left: 350px;
+    left: 410px;
     bottom: 80px;
-    top: 140px;
+    top: 120px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     padding-left: 10px;
+    padding-top: 0px;
+    border: solid 2px;
 }
 #res{
     width: 250px;

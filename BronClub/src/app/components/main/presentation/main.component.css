@@ -37,7 +37,8 @@ nav .logo{
     top: 80px;
     left: 80px;
     width: 600px;
-    height: 380px;
+    height: 500px;
+    border: solid 2px;
 }
 .main h2{
     font-size: 45px;
@@ -151,12 +152,20 @@ input:focus{
 .media i:hover{
     cursor: pointer;
 }
+.results-contatiner{
+    width: 450px;
+    position: fixed;
+    left: 130px;
+    bottom: 162px;
+    max-height: 150px;
+}
 .results{
-    border: solid 2px;
-    width: 250px;
-    height: 80px;
-    margin-right: -10px;
-    position: relative;
-    top: 80px; 
-    right: 250px;
+   width: 450px;
+   height: 100px;
+   position: fixed;
+   left: 130px;
+   bottom: 107px;
+   box-shadow:0 0 5pt 2pt #D3D3D3;
+   overflow-y: auto;
+   z-index: 1;
 }
