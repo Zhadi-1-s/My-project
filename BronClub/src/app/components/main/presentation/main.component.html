@@ -1,17 +1,23 @@
 <div>
-    <div class="main">
+    <div class="main" (click)="toogleDropDownAnywhere()">
         <div>
             <h2> Возможность бронировать онлайн, места <br> в компьютерных клубах</h2>
         </div>
         <div class="search">
             <i class="bi bi-search"></i>
             <form [formGroup] = "clubName">
-                <input formControlName="search" placeholder="Введите название">
+                <input formControlName="search" placeholder="Введите название" (click)="toggleDropDownVisibility()">
             </form>
             <div *ngIf="isDropDownVisibile">
                 <div class="results">
                     <ul *ngFor="let club of clubsData$">
-                        <li>{{club.name}}</li>
+                        <img [src]="club.mainPhoto" alt="">
+                        <li id="margin">{{club.name}}</li>
+                        <span id="margin">{{club.location}}</span>
+                        <div style="margin-left: 50px;">
+                            <i class="bi bi-heart" style="font-size: 18px;"></i>
+                            <span id="margin">{{club.rating}}</span>
+                        </div>
                     </ul>
                 </div>
             </div>

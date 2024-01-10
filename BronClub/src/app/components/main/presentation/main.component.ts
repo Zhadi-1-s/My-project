@@ -51,6 +51,9 @@ export class MainComponent implements OnInit{
   toggleDropDownVisibility():void{
     this.isDropDownVisibile = !this.isDropDownVisibile
   }
+  toogleDropDownAnywhere():void{
+    this.isDropDownVisibile = false;
+  }
 
   goToclubs(){
     this.navigator.navigateToClubs()
