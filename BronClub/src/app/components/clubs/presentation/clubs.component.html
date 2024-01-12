@@ -61,7 +61,7 @@
         <span>Найдено {{res}} результатов</span>
     </div> -->
     <div class="main">
-        <div class="club" *ngFor="let club of clubs">
+        <div class="club" *ngFor="let club of clubs" (click)="navigateToClub(club.id)">
             <div id="photo">
                 <img [src]="club.mainPhoto" alt="">
             </div>    

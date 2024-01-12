@@ -3,6 +3,8 @@ import {Observable, of} from 'rxjs'
 
 import { Club } from '../models/club.model';
 
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,5 +23,9 @@ export class ClubService {
     return of(this.clubs)
   } 
 
+  getClubById(id:number):Observable<any>{
+        const club = this.clubs.find(c => c.id === id)
+        return of(club)
+  }
   
 }
