@@ -7,18 +7,19 @@ import { MainComponent } from './components/main/presentation/main.component';
 import { MainModule } from './components/main/main.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClubsModule } from './components/clubs/clubs.module';
-import { ClubComponent } from './components/club/club.component';
+import { ClubComponent } from './components/club/presentation/club.component';
+import { ClubModule } from './components/club/club.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClubComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MainModule,
-    ClubsModule
+    ClubsModule,
+    ClubModule
   ],
   providers: [Navigator],
   bootstrap: [AppComponent]

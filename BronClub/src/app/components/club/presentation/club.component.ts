@@ -13,19 +13,28 @@ export class ClubComponent implements OnInit {
 
   club:Club;
 
+  images:string[];
+
+  selectedIndex = 0;
+
   ngOnInit(): void {
     this.route.paramMap.subscribe((params:any)=>{
       const id = +params.get('id');
       this.clubService.getClubById(id).subscribe(
         data => {
           this.club = data;
-          console.log('Дата взят правильно')
+          this.images = data.photoURL;
+          console.log('Дата взят правильно',this.images)
         },
         error => {
           console.log(error.message)
         }
       )
     })
+  }
+
+  selectImage(index:number){
+    this.selectedIndex = index
   }
 
 }

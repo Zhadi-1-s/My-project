@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './components/main/presentation/main.component';
 import { ClubsComponent } from './components/clubs/presentation/clubs.component';
-import { ClubComponent } from './components/club/club.component';
+import { ClubComponent } from './components/club/presentation/club.component';
 
 const routes: Routes = [
   {path:'main',component:MainComponent},

@@ -1,0 +1,17 @@
+<div>
+    <div class="text">
+        <a href="">BronClub / </a>
+        <span>{{club.name}} /</span>
+        <span>{{club.location}}</span>
+    </div>
+    <div class="slide-container">
+            <img *ngFor="let image of images; let i = index"  [src]="image" alt="AreaPhotos" 
+            [ngClass]="{'image-active': selectedIndex === i}">
+            <div class="slide-dot-container">
+                <span *ngFor="let dot of images; let i = index" class="dot" 
+                [ngClass]="{'active':selectedIndex === i}" (click)="selectImage(i)">
+        
+                </span>
+            </div>
+    </div>
+</div>
