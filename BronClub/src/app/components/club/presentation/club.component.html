@@ -5,13 +5,19 @@
         <span>{{club.location}}</span>
     </div>
     <div class="slide-container">
-            <img *ngFor="let image of images; let i = index"  [src]="image" alt="AreaPhotos" 
+            <img *ngFor="let image of images; let i = index"  [src]="image" alt="AreaPhotos" class="fade" 
             [ngClass]="{'image-active': selectedIndex === i}">
             <div class="slide-dot-container">
                 <span *ngFor="let dot of images; let i = index" class="dot" 
                 [ngClass]="{'active':selectedIndex === i}" (click)="selectImage(i)">
         
                 </span>
+            </div>
+            <div class="btn-slide-container btn-prev" (click)="onPrevClick()">
+                <i class="fa fa-arrow-circle-left icon-carousel"></i>
+            </div>
+            <div class="btn-slide-container btn-next" (click)="onNextClick()">
+                <i class="fa fa-arrow-circle-right icon-carousel"></i>
             </div>
     </div>
 </div>
