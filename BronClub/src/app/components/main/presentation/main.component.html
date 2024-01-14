@@ -10,7 +10,7 @@
             </form>
             <div *ngIf="isDropDownVisibile">
                 <div class="results">
-                    <ul *ngFor="let club of clubsData$">
+                    <ul *ngFor="let club of clubsData$" (click)="goToClub(club.id)">
                         <img [src]="club.mainPhoto" alt="">
                         <li id="margin">{{club.name}}</li>
                         <span id="margin">{{club.location}}</span>

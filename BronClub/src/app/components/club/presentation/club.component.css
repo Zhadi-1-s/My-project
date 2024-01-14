@@ -16,7 +16,7 @@
 }
 .slide-container{
     position: relative;
-    margin-top: 100px;
+    margin-top: 60px;
     margin-left: 100px;
     width: 580px;
     height: 420px;
@@ -106,4 +106,12 @@
 }
 .icon-carousel:active{
     opacity: 0.5;
+}
+.description-container{
+    position: relative;
+    bottom: 420px;
+    left: 780px;
+    width: 500px;
+    height: 500px;
+    border: solid 2px;
 }

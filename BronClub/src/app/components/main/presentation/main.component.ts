@@ -58,5 +58,7 @@ export class MainComponent implements OnInit{
   goToclubs(){
     this.navigator.navigateToClubs()
   }
-  
+  goToClub(id:number){
+      this.navigator.navigateToClub(id)
+  }
 }

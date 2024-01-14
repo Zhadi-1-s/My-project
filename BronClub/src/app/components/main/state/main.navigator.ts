@@ -14,4 +14,7 @@ export class Navigator{
     NavigateToMain(){
         this.router.navigate(['main/'])
     }
+    navigateToClub(id:number):void{
+        this.router.navigate(['/club',id])
+    }
 }
