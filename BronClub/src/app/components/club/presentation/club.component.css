@@ -148,6 +148,18 @@
 .line-after1{
     margin-top: 90px;
 }
-.about-block{
-    
+.rating-block{
+    position: absolute;
+    left: 25px;
+    top: 110px;
+    border: solid 2px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    font-size: 20px;
+}
+.line-after2{
+    margin-top: 160px;
 }
