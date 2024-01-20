@@ -22,6 +22,7 @@
     height: 420px;
     border-radius: 12px;
     box-shadow: 0 8px 16px #dce1e1;
+    
 }
 .slide-container img{
     size: 100%;
@@ -112,10 +113,14 @@
     bottom: 420px;
     left: 780px;
     width: 500px;
-    height: 500px;
-    border: solid 2px;
+    height: 600px;
+    border-radius: 12px;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow:0 0 3pt 2pt #D3D3D3;
 }
 .name-block{
     position: absolute;
@@ -162,4 +167,62 @@
 }
 .line-after2{
     margin-top: 160px;
+}
+.about-block{
+    position: absolute;
+    left: 25px;
+    top: 170px;
+    border: solid 2px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 200px;
+}
+#subBlock-icon{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: start;
+    margin-top: 10px;
+    font-size: 16px;
+}
+#subBlock-icon i{
+    margin-left: 10px;
+    font-size: 20px;
+}
+#subBlock-icon span{
+    margin-left: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(102, 101, 101);
+}
+.map-realization{
+    border: solid 1px;
+    position: absolute;
+    left: 25px;
+    bottom: 68px;
+    width: 450px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.button-block{
+    position: absolute;
+    left: 25px;
+    bottom: 12px;
+    border: solid 1px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+}
+.button-block button{
+    width: 250px;
+    height: 45px;
+    background-color: #2C2B2B;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    border-radius: 12px;
 }
