@@ -1,6 +1,6 @@
 .text{
     position: relative;
-    border: solid 2px;
+   
     width: 300px;
     height: 30px;
     top: 20px;
@@ -108,9 +108,34 @@
 .icon-carousel:active{
     opacity: 0.5;
 }
-.description-container{
+.under-slide-container{
+    border: solid 1px;
+    width: 580px;
+    height: 140px;
     position: relative;
-    bottom: 420px;
+    padding: 0;
+    margin: 0;
+    left: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.under-slide-container img{
+    width: 130px;
+    height: 100%;
+}
+.under-slide-container img.image-active{
+    border: gray 2px;
+    height: 100%;
+    display: block;
+    border-radius: 12px;
+}
+.under-slide-container img:hover{
+    cursor: pointer;
+}
+.description-container{
+    position: absolute;
+    top: 170px;
     left: 780px;
     width: 500px;
     height: 600px;
@@ -127,12 +152,12 @@
     top: 0;
     left: 0;
     margin-left: 25px;
-    margin-top: 35px;
+    margin-top: 20px;
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: solid 2px;
+    
     font-size: 25px;
     align-items: center;
     width: 450px;
@@ -151,28 +176,28 @@
     margin-left: 45px;
 }
 .line-after1{
-    margin-top: 90px;
+    margin-top: 80px;
 }
 .rating-block{
     position: absolute;
     left: 25px;
-    top: 110px;
-    border: solid 2px;
+    top: 100px;
+   
     text-align: center;
     display: flex;
-    justify-content: center;
+    
     align-items: center;
-    width: 100px;
+    width: 450px;
     font-size: 20px;
 }
 .line-after2{
-    margin-top: 160px;
+    margin-top: 150px;
 }
 .about-block{
     position: absolute;
     left: 25px;
-    top: 170px;
-    border: solid 2px;
+    top: 160px;
+   
     font-size: 18px;
     display: flex;
     flex-direction: column;
@@ -212,7 +237,7 @@
     position: absolute;
     left: 25px;
     bottom: 12px;
-    border: solid 1px;
+    
     width: 450px;
     display: flex;
     justify-content: center;
@@ -223,6 +248,20 @@
     background-color: #2C2B2B;
     color: white;
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 12px;
+    border: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    will-change: transform;
+    outline: none;
+    text-align: center;
+    box-sizing: border-box;
+}
+.button-block button:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+.button-block button:active{
+    box-shadow: none;
+    transform: translateY(0);
 }

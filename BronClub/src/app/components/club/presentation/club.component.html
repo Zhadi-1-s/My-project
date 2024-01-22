@@ -20,6 +20,10 @@
                 <i class="fa fa-arrow-circle-right icon-carousel"></i>
             </div>
     </div>
+    <div class="under-slide-container">
+        <img *ngFor="let image of images; let i = index" [src]="image" alt="area"
+         [ngClass]="{'image-active': selectedIndex === i}" (click)="selectImage(i)">
+    </div>
     <div class="description-container">
         <div class="name-block">
             <span>{{club.name}} / Компьютерный клуб</span>
